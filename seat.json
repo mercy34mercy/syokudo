@@ -1,0 +1,22 @@
+{
+    "posts":[
+    {
+     "TableId": "1",
+     "Tablegroup": "1",
+     "CardId": "1",
+     "Name": "masashi"
+    },
+    {
+     "TableId": "2",
+     "Tablegroup": "1",
+     "CardId": "2",
+     "Name": "mao"
+    },
+    {
+     "TableId": "3",
+     "Tablegroup": "1",
+     "CardId": "3",
+     "Name": "riku"
+    }
+]
+}
