@@ -5,8 +5,6 @@ import useFetch  from "./getdata";
 const  App = () => {
     const { data, isLoading, isError } = useFetch("https://syokudo-prod.azurewebsites.net/tableinfo/user");
     const timenow = new Date()
-    const d = new Date(data[0].Time)
-    console.log((timenow - d ) / (60*1000))
 
 
     if(isLoading) {
