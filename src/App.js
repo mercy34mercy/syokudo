@@ -32,7 +32,7 @@ const  App = () => {
                   color: "#f1f1f1",
                   padding: "0.5rem",
                 }
-                : ((timenow - new Date(d.Time) ) / (60*1000)) < 15
+                : ((timenow - new Date(d.Time) ) / (60*1000)) < 5
                   ? {
                     width: "50%",
                     textAlign: "center",
@@ -40,7 +40,7 @@ const  App = () => {
                     color: "#f1f1f1",
                     padding: "0.5rem",
                   }
-                  : (((timenow -  new Date(d.Time) ) / (60*1000)) < 30)
+                  : (((timenow -  new Date(d.Time) ) / (60*1000)) < 10)
                     ? {
                       width: "50%",
                       textAlign: "center",
