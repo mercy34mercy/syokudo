@@ -5,6 +5,8 @@ import useFetch  from "./getdata";
 const  App = () => {
     const { data, isLoading, isError } = useFetch("https://syokudo-prod.azurewebsites.net/tableinfo/user");
     const timenow = new Date()
+    const d = new Date(data[0].Time)
+    console.log((timenow - d ) / (60*1000))
 
 
     if(isLoading) {
@@ -16,6 +18,7 @@ const  App = () => {
     }
 
   return (
+
     <ul Class="SeatList">
       {data.map((d,index) => (
         <li key={index}
@@ -23,7 +26,7 @@ const  App = () => {
           <button
             type="button"
             style={
-              timenow - new Date(d.Time) < 1000
+              (timenow - new Date(d.Time) )< 1000
                 ? {
                   width: "50%",
                   textAlign: "center",
@@ -31,7 +34,7 @@ const  App = () => {
                   color: "#f1f1f1",
                   padding: "0.5rem",
                 }
-                : (timenow - d.Time / (60*1000)) < 15
+                : ((timenow - new Date(d.Time) ) / (60*1000)) < 15
                   ? {
                     width: "50%",
                     textAlign: "center",
@@ -39,7 +42,7 @@ const  App = () => {
                     color: "#f1f1f1",
                     padding: "0.5rem",
                   }
-                  : (timenow - d.Time / (60*1000)) < 30
+                  : (((timenow -  new Date(d.Time) ) / (60*1000)) < 30)
                     ? {
                       width: "50%",
                       textAlign: "center",
