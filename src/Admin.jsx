@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css"
+import DigitalClock from "./Clock";
 import useFetch  from "./getdata";
+import Name from "./Name";
+import useTime from "./UseTime";
 
-const  App = () => {
-    const { data, isLoading, isError } = useFetch("https://syokudo-prod.azurewebsites.net/tableinfo/user");
+const Admin = () => {
+    const { data, isLoading, isError } = useFetch("https://syokudo-prod.azurewebsites.net/tableinfo/admin");
     const timenow = new Date()
+
+
+
+    // var time = useTime(1000)
 
 
     if(isLoading) {
@@ -16,6 +23,8 @@ const  App = () => {
     }
 
   return (
+    <div>
+    {/* <DigitalClock time={time}></DigitalClock> */}
     <ul Class="SeatList">
       {data.map((d,index) => (
         <li key={index}
@@ -56,20 +65,15 @@ const  App = () => {
                     }}
           >
             {"座席番号"+(index+1)}
+            <Name name={d.Name}></Name>
           </button>
         </li>
 
       ))
       }
     </ul >
+    </div>
   );
 }
 
-export default App;
-
-
-
-
-
-
-
+export default Admin;
