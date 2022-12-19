@@ -1,22 +1,30 @@
-{
-    "posts":[
+[
     {
-     "TableId": "1",
-     "Tablegroup": "1",
-     "CardId": "1",
-     "Name": "masashi"
+        "CreatedAt": "2022-12-07T11:31:33.737Z",
+        "UpdatedAt": "2022-12-07T11:31:33.737Z",
+        "DeletedAt": null,
+        "CardId": "01148e3a501ba213",
+        "Name": "立命館太郎",
+        "Cardinfo": {
+            "CreatedAt": "0001-01-01T00:00:00Z",
+            "UpdatedAt": "0001-01-01T00:00:00Z",
+            "DeletedAt": null,
+            "CardId": "",
+            "TrayId": ""
+        }
     },
     {
-     "TableId": "2",
-     "Tablegroup": "1",
-     "CardId": "2",
-     "Name": "mao"
-    },
-    {
-     "TableId": "3",
-     "Tablegroup": "1",
-     "CardId": "3",
-     "Name": "riku"
+        "CreatedAt": "2022-12-07T11:31:33.11Z",
+        "UpdatedAt": "2022-12-07T11:31:33.11Z",
+        "DeletedAt": null,
+        "CardId": "04168632ad7381",
+        "Name": "立命館二郎",
+        "Cardinfo": {
+            "CreatedAt": "0001-01-01T00:00:00Z",
+            "UpdatedAt": "0001-01-01T00:00:00Z",
+            "DeletedAt": null,
+            "CardId": "",
+            "TrayId": ""
+        }
     }
 ]
-}
